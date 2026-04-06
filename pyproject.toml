@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "agentic-ai-framework"
+version = "0.1.0"
+description = "Production-ready multi-agent AI framework with parallel execution, powered by Claude"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["ai", "agents", "llm", "anthropic", "claude", "multi-agent", "orchestration", "agentic"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "anthropic>=0.40.0",
+    "aiohttp>=3.9.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "black>=24.0",
+    "ruff>=0.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/agentic-ai-framework"
+Documentation = "https://github.com/yourusername/agentic-ai-framework/blob/main/README.md"
+Issues = "https://github.com/yourusername/agentic-ai-framework/issues"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[tool.ruff]
+line-length = 100
